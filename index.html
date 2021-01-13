@@ -7,7 +7,7 @@
         <h1>Guess the Number</h1>
 
         <script>
-            let num = Math.floor(Math.random() * 11);
+            let num = Math.floor(Math.random() * 101) + 1;
             let guess = prompt("Guess a number between 1 and 10:");
             var totalGuesses = 1; // I started this variable at one rather than add one at the start of the while loop, because you'll always need at least one guess to get the number.
 
