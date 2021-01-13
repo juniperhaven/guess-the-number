@@ -9,24 +9,22 @@
         <script>
             let num = Math.floor(Math.random() * 11);
             let guess = prompt("Guess a number between 1 and 10:");
+            let gotIt = false;
             var totalGuesses = 1;
 
-            console.log(num);
-
             while(guess != num) {
-                console.log(num);
                 if(num > guess) {
-                    guess = ("Lower! Enter a new guess:");
+                    guess = prompt("Higher! Enter a new guess:");
                     totalGuesses += 1;
                 }
                 else if(num < guess) {
-                    guess = ("Higher! Enter a new guess:");
+                    guess = prompt("Lower! Enter a new guess:");
                     totalGuesses += 1;
                 }
-                else {
-                    alert("Congratulations! You guessed the correct number, which was " + num + ". It took you " + totalGuesses + " guesses.");
-                }
+                // I don't need an else block for this statement, because as soon as guess = num, the while loop will end.
             }
+
+            alert("Congratulations! You guessed the correct number, which was " + num + ". It took you " + totalGuesses + " guesses.");
         </script>
     </body>
 </html>
