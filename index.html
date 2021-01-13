@@ -7,19 +7,23 @@
         <h1>Guess the Number</h1>
 
         <script>
-            alert("I'm an alert!");
-        </script>
-
-        <script>
             let num = Math.floor(Math.random() * 11);
+            var totalGuesses;
 
-            let guess = prompt("guess a number between 1 and 10");
+            while(guess != num) {
+                let guess = prompt("Guess a number between 1 and 10:");
 
-            if(num == guess) {
-                alert("Got it!");
-            }
-            else {
-                alert("Sorry!  You guessed " + guess + " and the number was " + num);
+                if(num > guess) {
+                    alert("Lower!");
+                    totalGuesses += 1;
+                }
+                else if(num < guess) {
+                    alert("Higher!");
+                    totalGuesses += 1;
+                }
+                else {
+                    alert("Congratulations! You guessed the correct number, which was " + num + ". It took you " + totalGuesses + "guesses.");
+                }
             }
         </script>
     </body>
