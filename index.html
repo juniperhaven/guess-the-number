@@ -8,17 +8,16 @@
 
         <script>
             let num = Math.floor(Math.random() * 11);
+            let guess = prompt("Guess a number between 1 and 10:");
             var totalGuesses;
 
             while(guess != num) {
-                let guess = prompt("Guess a number between 1 and 10:");
-
                 if(num > guess) {
-                    alert("Lower!");
+                    guess = ("Lower! Enter a new guess:");
                     totalGuesses += 1;
                 }
                 else if(num < guess) {
-                    alert("Higher!");
+                    guess = ("Higher! Enter a new guess:");
                     totalGuesses += 1;
                 }
                 else {
